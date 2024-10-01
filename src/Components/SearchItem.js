@@ -1,20 +1,17 @@
 import React from 'react'
 import "../Pages/SearchNews.css"
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { newsId } from '../redux/counter/counterSlice';
 
 const SearchItem = ({ sNews }) => {
 
     const navigate = useNavigate();
 
-    const dispatch = useDispatch();
-
-    const handleClick = (id) => {
-        dispatch(newsId(id));
-        navigate("/snews");
+    const handleClick = (id, tag) => {
+        navigate(`/snews/${(tag).toLowerCase()}/${id}`);
     }
 
+
+    //Date Formatting
     const date = new Date(sNews.createdAt);
 
     const formattedDate = date.toLocaleDateString('en-US', {
@@ -32,7 +29,7 @@ const SearchItem = ({ sNews }) => {
     }).replace(/\u202f/g, ' ');
 
     return (
-        <div onClick={() => handleClick(sNews._id)} className="searchNewsParticularBox">
+        <div onClick={() => handleClick(sNews._id, sNews.tag)} className="searchNewsParticularBox">
             <img src={sNews.coverImageURL} alt="" />
             <h5>{sNews.title.split(" ").slice(0, 5).join(" ") + "..."}</h5>
             <div className="searchNewsParticularTimeDate">
