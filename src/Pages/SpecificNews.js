@@ -149,7 +149,7 @@ const SpecificNews = ({ showAddMenu, showAlert, showProfile }) => {
                 </div>
                 <hr />
             </div >
-            <Comments showAlert={showAlert} specificNews={specificNews} />
+            <Comments showAlert={showAlert} />
         </>
     )
 }

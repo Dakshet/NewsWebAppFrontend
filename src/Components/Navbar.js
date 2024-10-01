@@ -91,6 +91,9 @@ const Navbar = ({ showAddMenu, setShowAddMenu, showProfile, setShowProfile, show
                                 <i id='downDownBoxIcon' className="ri-arrow-down-s-line"></i>
                             </div>
                         </li>
+                        <li onClick={() => setShowSearch(!showSearch)} className='hideSearchBarIcon'>
+                            <i className="ri-search-line"></i>
+                        </li>
                         <li onClick={handleClick} className={`hideField ${isUserIsNotLogin ? "hideLogin" : (location.pathname === '/addnews' ? 'activeNav' : '')}`}>
                             <Link to="/addnews">Add News</Link>
                         </li>
@@ -103,8 +106,15 @@ const Navbar = ({ showAddMenu, setShowAddMenu, showProfile, setShowProfile, show
                         <li className={`hideField ${isUserIsNotLogin ? "hideLogin" : ""}`} onClick={handleLogout}>
                             Logout
                         </li>
-                        <li onClick={() => setShowSearch(!showSearch)} className='hideSearchBarIcon'>
-                            <i className="ri-search-line"></i>
+
+                        <li>
+                            <div className="socialMediaIconx hideField">
+                                <Link target='_blank' to="www.industrialtimes24@gmail.com"><i className="ri-mail-line"></i></Link>
+                                <Link target='_blank' to="https://youtube.com/@industrialtimes24?si=n67pYl2TJSSpb0bD"><i className="ri-youtube-line"></i></Link>
+                                <Link target='_blank' to="https://www.linkedin.com/in/industrial-times-7ab62431a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="ri-linkedin-box-line"></i></Link>
+                                <Link target='_blank' to="https://www.facebook.com/"><i className="ri-facebook-box-line"></i></Link>
+                                <Link target='_blank' to="https://www.instagram.com/"><i className="ri-instagram-line"></i></Link>
+                            </div>
                         </li>
                     </ul>
                 </div>

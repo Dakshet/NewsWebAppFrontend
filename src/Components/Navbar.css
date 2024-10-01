@@ -157,10 +157,20 @@
     color: #011E29;
 }
 
+/* .hideFieldx {
+    display: none;
+} */
+
+
+.navbar-center ul li .hideField {
+    display: none;
+}
+
 
 
 
 /* --------------------------- Responsive media */
+
 
 
 @media (max-width:1200px) {
@@ -294,6 +304,18 @@
         display: none;
     }
 
+    .navbar-center ul li .socialMediaIconx {
+        display: block;
+        /* background-color: red; */
+        margin-left: -65px;
+        height: 20px;
+    }
+
+    .navbar-center ul li .socialMediaIconx i {
+        margin: 0px 4px;
+        background-color: #02384d;
+        color: white;
+    }
 }
 
 @media (max-width:400px) {

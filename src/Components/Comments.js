@@ -5,7 +5,7 @@ import CommentItem from './CommentItem';
 import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 
-const Comments = ({ specificNews, showAlert }) => {
+const Comments = ({ showAlert }) => {
 
     const location = useLocation();
     const { commentNews, addComment, fetchComment } = useContext(NewsContext);

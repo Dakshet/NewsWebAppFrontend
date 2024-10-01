@@ -426,7 +426,7 @@ const NewsState = (props) => {
 
                 if (json.comments) {
                     setCommentNews(json.comments);
-                    console.log(json.comments);
+                    // console.log(json.comments);
                 }
 
                 else {

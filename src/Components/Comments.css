@@ -164,6 +164,9 @@
         margin-left: -16vw;
     }
 
+    .commentSignInBox p {
+        font-size: 15px;
+    }
 
     .commentInnerNameAndTime p {
         /* margin-left: -20vw;*/
